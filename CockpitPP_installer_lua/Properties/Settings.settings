@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CockpitPP_installer_lua.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Lang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fr-FR</Value>
+    </Setting>
+    <Setting Name="DCS_Version" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DCS</Value>
+    </Setting>
+    <Setting Name="IPs_Android" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DCS_Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Android_Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LuaCockpit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cockpit++.lua</Value>
+    </Setting>
+    <Setting Name="LuaExport" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Export.lua</Value>
+    </Setting>
+    <Setting Name="URLGitHubLuaFiles" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://github.com/CockpitPP/CockpitPP_lua/archive/master.zip</Value>
+    </Setting>
+    <Setting Name="TempFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">temp</Value>
+    </Setting>
+    <Setting Name="ZipFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">master.zip</Value>
+    </Setting>
+    <Setting Name="UnzipFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CockpitPP_lua-master</Value>
+    </Setting>
+    <Setting Name="LineExport" Type="System.String" Scope="User">
+      <Value Profile="(Default)">local Cockpitpp=require('lfs');dofile(Cockpitpp.writedir()..'Scripts/Cockpit++.lua')</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
