@@ -1,4 +1,4 @@
-﻿InstalleurCockpit++
+﻿CockpitPP_installer_lua
 
 
 winexe
@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\App.xaml
 3-1181054877
 
-9-1444552008
+5-2017746502
 152097430890
 Resources\en-US.xaml;Resources\fr-FR.xaml;MainWindow.xaml;
 
-True
+False
 
