@@ -1,0 +1,32 @@
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\bin\Release\InstalleurCockpit++.exe.config
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\bin\Release\InstalleurCockpit++.exe
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\bin\Release\InstalleurCockpit++.pdb
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\MainWindow.g.cs
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\App.g.cs
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\InstalleurCockpit++_MarkupCompile.cache
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\InstalleurCockpit++_MarkupCompile.lref
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\App.baml
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\Resources\en-US.baml
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\Resources\fr-FR.baml
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\MainWindow.baml
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\InstalleurCockpit++.g.resources
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.Properties.Resources.resources
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.csproj.GenerateResource.Cache
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\InstalleurCockpit++.exe
+C:\Users\Nico\documents\visual studio 2015\Projects\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\InstalleurCockpit++.pdb
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\bin\Release\CockpitPP_installer_lua.exe.config
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\bin\Release\CockpitPP_installer_lua.exe
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\bin\Release\CockpitPP_installer_lua.pdb
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\MainWindow.g.cs
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\App.g.cs
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua_MarkupCompile.cache
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua_MarkupCompile.lref
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\App.baml
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\Resources\en-US.baml
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\Resources\fr-FR.baml
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\MainWindow.baml
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.g.resources
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.Properties.Resources.resources
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.csproj.GenerateResource.Cache
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.exe
+C:\Users\Nico\Documents\GitHub\CockpitPP_installer_lua\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.pdb
