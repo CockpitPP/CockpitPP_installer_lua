@@ -1,0 +1,37 @@
+﻿<!--*************************************************
+** fr-FR.xaml                                      **
+** Author : HERR Nicolas			               **
+** GitHub : https://github.com/CockpitPP           **
+** Created on 17/11/2018				           **
+** Modified on 21/11/2018				           **
+** Description : French language definition file   **
+**************************************************-->
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CockpitPP_installer_lua"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="Culture">fr-FR</system:String>
+
+    <system:String x:Key="MainWindow">Configuration Cockpit++</system:String>
+    <system:String x:Key="Btn_Close">Quitter</system:String>
+    <system:String x:Key="Btn_Update">Mise à jour</system:String>
+    <system:String x:Key="Lbl_Dcs_Versions">Version de DCS : </system:String>
+    <system:String x:Key="Lbl_IPs_Android">IPs client Android :</system:String>
+    <system:String x:Key="Btn_Add">Ajouter</system:String>
+    <system:String x:Key="Btn_Delete">Supprimer</system:String>
+    <system:String x:Key="Lbl_Dcs_Port">Port DCS : </system:String>
+    <system:String x:Key="Lbl_Android_Port">Port Android :</system:String>
+    <system:String x:Key="Btn_Apply">Appliquer</system:String>
+    <system:String x:Key="Lbl_Ip">IP du PC : </system:String>
+    <system:String x:Key="Btn_Yes">OUI</system:String>
+    <system:String x:Key="Btn_No">NON</system:String>
+    <system:String x:Key="exit_text">Voulez-vous vraiment quitter le programme ?</system:String>
+    <system:String x:Key="Lbl_Lang">Langue : </system:String>
+    <system:String x:Key="Warning_Title">Attention</system:String>
+    <system:String x:Key="Warning_lua1">Pas de fichier installer, merci de mettre à jour</system:String>
+    <system:String x:Key="Warning_lua2">Fichier manquant, merci de mettre à jour</system:String>
+    <system:String x:Key="Apply">OK</system:String>
+    <system:String x:Key="UpdateComplete">Mise à jour complète</system:String>
+
+</ResourceDictionary>
