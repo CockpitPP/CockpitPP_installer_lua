@@ -24,7 +24,7 @@
     <system:String x:Key="Lbl_Dcs_Port">DCS port :</system:String>
     <system:String x:Key="Lbl_Android_Port">Android port :</system:String>
     <system:String x:Key="Btn_Apply">Apply</system:String>
-    <system:String x:Key="Lbl_Ip">PC IP :</system:String>
+    <system:String x:Key="Lbl_Ip">Local IP :</system:String>
     <system:String x:Key="Btn_Yes">YES</system:String>
     <system:String x:Key="Btn_No">NO</system:String>
     <system:String x:Key="exit_text">Do you want to exit?</system:String>

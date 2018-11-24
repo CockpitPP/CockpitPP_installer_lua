@@ -17,6 +17,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Media;
 using System.Windows.Input;
 using System.Net;
+using System.Net.Sockets;
 
 namespace CockpitPP_installer_lua
 {
@@ -29,7 +30,7 @@ namespace CockpitPP_installer_lua
 
         /// <summary>
         /// Constructor of the main class.
-        /// Initialize variables, language, DCS version saved and read data from LUA file
+        /// Initialize variables, language, Local IP, DCS version saved and read data from LUA file
         /// </summary>
         public MainWindow()
         {
@@ -47,6 +48,8 @@ namespace CockpitPP_installer_lua
             Initialize_CB_Lang();
 
             Initialize_CB_Dcs_Versions();
+
+            Lbl_Ip.Content += GetLocalIP();
         }
 
         /// <summary>
@@ -353,6 +356,23 @@ namespace CockpitPP_installer_lua
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Get the local IP.
+        /// Connect a UDP socket and read its local endpoint.
+        /// </summary>
+        /// <returns>string : local IP/returns>
+        private string GetLocalIP()
+        {
+            string localIP ="";
+            using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+            {
+                socket.Connect("8.8.8.8", 65530);
+                IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+                localIP = endPoint.Address.ToString();
+            }
+            return localIP;
         }
 
         /// <summary>
