@@ -35,7 +35,6 @@ D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.pdb
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\bin\Release\CockpitPP_installer_lua.exe
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\bin\Release\CockpitPP_installer_lua.pdb
-D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.csprojResolveAssemblyReference.cache
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\MainWindow.g.cs
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\App.g.cs
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua_MarkupCompile.cache
@@ -47,3 +46,5 @@ D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.g.resources
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.Properties.Resources.resources
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.csproj.GenerateResource.Cache
+D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.csproj.CoreCompileInputs.cache
+D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Release\CockpitPP_installer_lua.csprojAssemblyReference.cache

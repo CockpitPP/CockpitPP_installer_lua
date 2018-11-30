@@ -47,3 +47,5 @@ D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Debug\CockpitPP_installer_lua.g.resources
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Debug\CockpitPP_installer_lua.Properties.Resources.resources
 D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Debug\CockpitPP_installer_lua.csproj.GenerateResource.Cache
+D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Debug\CockpitPP_installer_lua.csproj.CoreCompileInputs.cache
+D:\__CLOUD\Documents\GitHub\CockpitPP_installer_lua\src\CockpitPP_installer_lua\obj\Debug\CockpitPP_installer_lua.csprojAssemblyReference.cache

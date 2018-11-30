@@ -3,7 +3,7 @@
 ** Author : HERR Nicolas			               **
 ** GitHub : https://github.com/CockpitPP           **
 ** Created on 17/11/2018				           **
-** Modified on 20/11/2018				           **
+** Modified on 27/11/2018				           **
 ** Description : Main interface			           **
 **************************************************-->
 <Window x:Name="MainWindows" x:Class="CockpitPP_installer_lua.MainWindow"
@@ -11,16 +11,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CockpitPP_installer_lua"
         mc:Ignorable="d"
-        Title="{DynamicResource MainWindow}" Height="550" Width="450" MinWidth="450" MinHeight="550" MaxHeight="550" MaxWidth="450">
+        Title="" Height="550" Width="450" MinWidth="450" MinHeight="550" MaxHeight="550" MaxWidth="450">
 
     <Grid Margin="0,2,-8,0">
 
-        <Button x:Name="Btn_Update" Content="{DynamicResource Btn_Update}" Margin="181,25,184,462" RenderTransformOrigin="0.4,-0.4" Click="Btn_Update_Click"/>
+        <Label x:Name="Lbl_Title" Content="{DynamicResource Title}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.581,-12"/>
 
-        <Label x:Name="Lbl_Dcs_Versions" Content="{DynamicResource Lbl_Dcs_Versions}" HorizontalAlignment="Left" Margin="62,79,0,0" VerticalAlignment="Top" Width="99"/>
-        <ComboBox x:Name="CB_Dcs_Versions" HorizontalAlignment="Left" Margin="166,80,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Dcs_Versions_SelectionChanged"/>
+        <Button x:Name="Btn_Update" Content="{DynamicResource Btn_Update}" Margin="289,77,76,410" RenderTransformOrigin="0.4,-0.4" Click="Btn_Update_Click"/>
+
+        <Label x:Name="Lbl_Dcs_Versions" Content="{DynamicResource Lbl_Dcs_Versions}" HorizontalAlignment="Left" Margin="24,79,0,0" VerticalAlignment="Top" Width="99"/>
+        <ComboBox x:Name="CB_Dcs_Versions" HorizontalAlignment="Left" Margin="128,80,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Dcs_Versions_SelectionChanged"/>
 
         <Label x:Name="Lbl_IPs_Android" Content="{DynamicResource Lbl_IPs_Android}" HorizontalAlignment="Left" Margin="62,132,0,0" VerticalAlignment="Top" Width="204" HorizontalContentAlignment="Center"/>
         <ListBox x:Name="LB_IPs_Android" HorizontalAlignment="Left" Height="179" Margin="62,158,0,0" VerticalAlignment="Top" Width="204"/>
@@ -53,20 +54,22 @@
         <Button x:Name="Btn_Add" Content="{DynamicResource Btn_Add}" Margin="289,188,76,299" RenderTransformOrigin="0.4,-0.4" Click="Btn_Add_Click" />
         <Button x:Name="Btn_Delete" Content="{DynamicResource Btn_Delete}" Margin="289,223,76,264" RenderTransformOrigin="0.4,-0.4" Click="Btn_Delete_Click" />
 
-        <Label x:Name="Lbl_Dcs_Port" Content="{DynamicResource Lbl_Dcs_Port}" HorizontalAlignment="Left" Margin="58,362,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Txt_Dcs_Port" HorizontalAlignment="Left" Height="23" Margin="146,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox"/>
+        <Label x:Name="Lbl_Dcs_Port" Content="{DynamicResource Lbl_Dcs_Port}" HorizontalAlignment="Left" Margin="58,345,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Txt_Dcs_Port" HorizontalAlignment="Left" Height="23" Margin="146,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox"/>
 
-        <Label x:Name="Lbl_Android_Port" Content="{DynamicResource Lbl_Android_Port}" HorizontalAlignment="Left" Margin="58,393,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Txt_Android_Port" HorizontalAlignment="Left" Height="23" Margin="146,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox"/>
+        <Label x:Name="Lbl_Android_Port" Content="{DynamicResource Lbl_Android_Port}" HorizontalAlignment="Left" Margin="58,376,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Txt_Android_Port" HorizontalAlignment="Left" Height="23" Margin="146,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox"/>
 
         <Button x:Name="Btn_Apply" Content="{DynamicResource Btn_Apply}" Margin="322,317,43,170" RenderTransformOrigin="0.4,-0.4" Click="Btn_Apply_Click"/>
 
-        <Label x:Name="Lbl_Ip" Content="{DynamicResource Lbl_Ip}" HorizontalAlignment="Left" Margin="10,419,0,0" VerticalAlignment="Top" Width="430" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="Lbl_Ip" Content="{DynamicResource Lbl_Ip}" HorizontalAlignment="Left" Margin="62,414,0,0" VerticalAlignment="Top" Width="91" FontSize="18"/>
+        <Label x:Name="Lbl_Local_Ip" Content="" HorizontalAlignment="Left" Margin="142,414,0,0" VerticalAlignment="Top" Width="249" FontSize="18"/>
 
         <Button x:Name="Btn_Close" Content="{DynamicResource Btn_Close}" Margin="322,460,43,27" RenderTransformOrigin="0.4,-0.4" Click="Btn_Close_Click"/>
 
         <Label x:Name="Lbl_Lang" Content="{DynamicResource Lbl_Lang}" HorizontalAlignment="Left" Margin="18,466,0,0" VerticalAlignment="Top" Width="70"/>
         <ComboBox x:Name="CB_Lang" HorizontalAlignment="Left" Margin="82,468,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Lang_SelectionChanged"/>
+
 
     </Grid>
 </Window>
