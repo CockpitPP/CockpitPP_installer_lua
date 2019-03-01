@@ -3,7 +3,7 @@
 ** Author : HERR Nicolas			           **
 ** GitHub : https://github.com/CockpitPP       **
 ** Created on 17/11/2018				       **
-** Modified on 21/11/2018				       **
+** Modified on 27/11/2018				       **
 ** Description : Main Class 			       **
 ************************************************/
 
@@ -17,6 +17,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Media;
 using System.Windows.Input;
 using System.Net;
+using System.Net.Sockets;
 
 namespace CockpitPP_installer_lua
 {
@@ -29,7 +30,7 @@ namespace CockpitPP_installer_lua
 
         /// <summary>
         /// Constructor of the main class.
-        /// Initialize variables, language, DCS version saved and read data from LUA file
+        /// Initialize variables, language, Local IP, DCS version saved and read data from LUA file
         /// </summary>
         public MainWindow()
         {
@@ -44,9 +45,12 @@ namespace CockpitPP_installer_lua
             }
 
             USERPROFILFOLDER = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            SCRIPTFOLDER = "";
             Initialize_CB_Lang();
 
             Initialize_CB_Dcs_Versions();
+
+            Lbl_Local_Ip.Content += GetLocalIP();
         }
 
         /// <summary>
@@ -102,17 +106,22 @@ namespace CockpitPP_installer_lua
             if (Directory.Exists(USERPROFILFOLDER + @"\Saved Games\DCS.openbeta"))
                 CB_Dcs_Versions.Items.Add(new Item { Value = "DCS.openbeta", Text = "OpenBeta" });
 
-            foreach (Item item in CB_Dcs_Versions.Items)
+            if (CB_Dcs_Versions.Items.Count != 0)
             {
-                if (item.Value as String == Properties.Settings.Default.DCS_Version)
+                foreach (Item item in CB_Dcs_Versions.Items)
                 {
-                    CB_Dcs_Versions.SelectedItem = item;
+                    if (item.Value as String == Properties.Settings.Default.DCS_Version)
+                    {
+                        CB_Dcs_Versions.SelectedItem = item;
 
-                    SCRIPTFOLDER = USERPROFILFOLDER + @"\Saved Games\" + item.Value + @"\Scripts\";
+                        SCRIPTFOLDER = USERPROFILFOLDER + @"\Saved Games\" + item.Value + @"\Scripts\";
 
-                    break;
+                        break;
+                    }
                 }
             }
+            else
+                MessageBox.Show((string)Application.Current.Resources["Warning_DCS_Version"], (string)Application.Current.Resources["Warning_Title"], MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         /// <summary>
@@ -121,18 +130,29 @@ namespace CockpitPP_installer_lua
         /// </summary>
         private void GetDatas()
         {
-
             if (File.Exists(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit))
             {
                 LB_IPs_Android.Items.Clear();
+                string IPsLine = ReadIPs(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit + "1");
+                string DCSPort = ReadDCSPort(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit);
+                string AndroidPort = ReadAndroidPort(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit);
 
-                foreach (string ip in ReadIPs(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit).Split(','))
+                if (IPsLine == "" || DCSPort == "" || AndroidPort == "")
+                    MessageBox.Show((string)Application.Current.Resources["Warning_lua3"], (string)Application.Current.Resources["Warning_Title"], MessageBoxButton.OK, MessageBoxImage.Warning);
+                else
                 {
-                    LB_IPs_Android.Items.Add(ip);
-                }
+                    if (IPsLine != "")
+                    {
+                        foreach (string ip in IPsLine.Split(','))
+                        {
+                            LB_IPs_Android.Items.Add(ip);
+                        }
+                    }
 
-                Txt_Dcs_Port.Text = ReadDCSPort(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit);
-                Txt_Android_Port.Text = ReadAndroidPort(SCRIPTFOLDER + Properties.Settings.Default.LuaCockpit);
+                    Txt_Dcs_Port.Text = DCSPort;
+                    Txt_Android_Port.Text = AndroidPort;
+                }
+                    
             }
             else
             {
@@ -155,17 +175,24 @@ namespace CockpitPP_installer_lua
             Regex rx_IPLine = new Regex("^local clientIP=");
             if (File.Exists(file))
             {
-                string[] lines = System.IO.File.ReadAllLines(file);
+                string[] lines = File.ReadAllLines(file);
 
                 foreach (string line in lines)
                 {
                     if (rx_IPLine.IsMatch(line))
                     {
-                        string IPsLine = line.Split('=')[1];
-                        Regex rx = new Regex("[\"{}]");
-                        IPsLine = rx.Replace(IPsLine, "");
-                        IPsLine = IPsLine.Replace(" ", "");
-                        return IPsLine;
+                        try
+                        {
+                            string IPsLine = line.Split('=')[1];
+                            Regex rx = new Regex("[\"{}]");
+                            IPsLine = rx.Replace(IPsLine, "");
+                            IPsLine = IPsLine.Replace(" ", "");
+                            return IPsLine;
+                        }
+                        catch (Exception e)
+                        {
+                            return "";
+                        }
                     }
                 }
             }
@@ -182,13 +209,20 @@ namespace CockpitPP_installer_lua
             Regex rx = new Regex("^local DCS_PORT =");
             if (File.Exists(file))
             {
-                string[] lines = System.IO.File.ReadAllLines(file);
+                string[] lines = File.ReadAllLines(file);
 
                 foreach (string line in lines)
                 {
                     if (rx.IsMatch(line))
                     {
-                        return line.Split('=')[1].Replace(" ", "");
+                        try
+                        {
+                            return line.Split('=')[1].Replace(" ", "");
+                        }
+                        catch (Exception e)
+                        {
+                            return "";
+                        }
                     }
                 }
             }
@@ -205,13 +239,20 @@ namespace CockpitPP_installer_lua
             Regex rx = new Regex("^local ANDROID_PORT =");
             if (File.Exists(file))
             {
-                string[] lines = System.IO.File.ReadAllLines(file);
+                string[] lines = File.ReadAllLines(file);
 
                 foreach (string line in lines)
                 {
                     if (rx.IsMatch(line))
                     {
-                        return line.Split('=')[1].Replace(" ", "");
+                        try
+                        {
+                            return line.Split('=')[1].Replace(" ", "");
+                        }
+                        catch (Exception e)
+                        {
+                            return "";
+                        }
                     }
                 }
             }
@@ -353,6 +394,23 @@ namespace CockpitPP_installer_lua
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Get the local IP.
+        /// Connect a UDP socket and read its local endpoint.
+        /// </summary>
+        /// <returns>string : local IP/returns>
+        private string GetLocalIP()
+        {
+            string localIP ="";
+            using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+            {
+                socket.Connect("8.8.8.8", 65530);
+                IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+                localIP = endPoint.Address.ToString();
+            }
+            return localIP;
         }
 
         /// <summary>
